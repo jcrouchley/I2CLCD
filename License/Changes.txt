@@ -1,0 +1,2 @@
+7/4/2011 - initial commit to github
+7/25/2011 - fix cursorleft function. getKey() now returns 0x00 if no keys in buffer

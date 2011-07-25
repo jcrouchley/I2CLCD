@@ -185,7 +185,7 @@ void I2CLCD::cursorLeft()
 {
   Wire.beginTransmission(_adr);
   Wire.send(0xfe);
-  Wire.send(0x14);
+  Wire.send(0x10);
   Wire.endTransmission();
   delay(1);
 }
@@ -287,11 +287,7 @@ uint8_t I2CLCD::getKey()
 	if(Wire.available()) {
 		key = Wire.receive(); // and return it
 	}
-	if(key != 0x00){
-		return key;
-	}else{
-		return 0x20;
-	}
+	return key;
 }
 
 /***************
