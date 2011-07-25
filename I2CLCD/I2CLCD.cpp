@@ -178,9 +178,6 @@ void I2CLCD::cursorRight()
   delay(1);
 }
 
-/////////////////
-//TODO
-/////////////////
 void I2CLCD::cursorLeft()
 {
   Wire.beginTransmission(_adr);
@@ -190,6 +187,9 @@ void I2CLCD::cursorLeft()
   delay(1);
 }
 
+/*
+Sets the display in programmable character mode at CGRAM address
+*/
 void I2CLCD::progCharMode()
 {
   Wire.beginTransmission(_adr);
