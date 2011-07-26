@@ -342,3 +342,10 @@ void I2CLCD::interruptOff()
 	Wire.endTransmission();
 	delay(1);
 }
+
+void I2CLCD::backspace()
+{
+	cursorLeft();
+	write(" ");
+	cursorLeft();
+}

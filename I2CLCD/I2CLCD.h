@@ -49,6 +49,7 @@ public:
   uint8_t readKeysInBuffer(uint8_t);
   void interruptOn();
   void interruptOff();
+  void backspace();
 
 private:
   uint8_t _adr;
